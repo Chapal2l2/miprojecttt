@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<a href="/">Home</a>
+{% if user.is_authenticated %}
+Hello {{user.username}} <a href="/logout/">Logout</a>
+{% else %}
+<a href="/login/">Login</a> <a href="/users/register/">Register</a>
+{% endif %}
+<hr>
+{% block content %}{% endblock %}
+</body>
+</html>
